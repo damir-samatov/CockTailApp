@@ -1,0 +1,21 @@
+.Footer {
+  z-index: 9999;
+  background-color: #cbfbce;
+  padding: 0.125em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+
+.Footer span {
+  font-size: 0.5rem;
+  color: #45458c;
+  margin-right: 1em;
+}
+/*# sourceMappingURL=Footer.css.map */

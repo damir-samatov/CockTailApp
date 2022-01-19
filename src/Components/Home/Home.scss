@@ -1,0 +1,37 @@
+@import "../StylesVariables/StylesVariables.scss";
+
+.Home {
+  .search_area {
+    margin: 2em 0em;
+    display: flex;
+    justify-content: center;
+    .search_input {
+      color: $font-color;
+      display: block;
+      width: 65%;
+      max-width: 500px;
+      margin-left: auto;
+      border: 2px solid #fff;
+      background-color: $bg2-color;
+      padding: 0.5em 1em;
+      &:focus {
+        outline: none;
+        border-color: $bg2-color;
+        background-color: #fff;
+      }
+    }
+    .search_button {
+      display: block;
+      margin-right: auto;
+      color: $font-color;
+      background-color: $bg-color;
+      padding: 0.5em 1em;
+      outline: none;
+      border: 2px solid #fff;
+      transition: border-color 100 ease;
+      &:hover {
+        border-color: $bg-color;
+      }
+    }
+  }
+}

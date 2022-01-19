@@ -1,0 +1,51 @@
+.Error {
+  text-align: center;
+  margin: 4em auto;
+}
+
+.Error img {
+  height: auto;
+  width: 200px;
+  opacity: 0.5;
+  margin: 2em;
+  text-align: center;
+  -webkit-animation: error 5s ease-in-out infinite;
+          animation: error 5s ease-in-out infinite;
+}
+
+.Error h1 {
+  color: #45458c;
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
+
+@-webkit-keyframes error {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@keyframes error {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+/*# sourceMappingURL=Error.css.map */

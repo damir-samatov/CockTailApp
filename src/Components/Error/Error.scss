@@ -1,0 +1,29 @@
+@import "../StylesVariables/StylesVariables.scss";
+.Error {
+  text-align: center;
+  margin: 4em auto;
+  img {
+    height: auto;
+    width: 200px;
+    opacity: 0.5;
+    margin: 2em;
+    text-align: center;
+    animation: error 5s ease-in-out infinite;
+  }
+  h1 {
+    color: $font-color;
+    margin-bottom: 2em;
+    font-size: 2rem;
+  }
+}
+@keyframes error {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}

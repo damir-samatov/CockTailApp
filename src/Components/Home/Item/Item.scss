@@ -1,0 +1,70 @@
+@import "../../StylesVariables/StylesVariables.scss";
+@keyframes appear_card {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.Item {
+  width: 294px;
+  height: 392px;
+  perspective: 1000px;
+  position: relative;
+  &:hover .item_content {
+    transform: rotateY(180deg);
+  }
+  .item_content {
+    transform-style: preserve-3d;
+    animation: appear_card 2s ease;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+    background: rgba(0, 0, 0, 0.75);
+    .image_side {
+      border-radius: 0.5em;
+      overflow: hidden;
+      transform: translateZ(50px);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .text_side {
+      overflow: scroll;
+      transform: rotateY(180deg) translateZ(50px) translate(50%, -50%);
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5em 0;
+      color: rgb(255, 255, 255);
+      width: 90%;
+      height: 90%;
+      top: 50%;
+      left: 50%;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .drink_name {
+        font-size: 1.5rem;
+      }
+      h1 {
+        margin-bottom: 0.5em;
+        font-size: 1.25rem;
+      }
+      p,
+      span {
+        margin-bottom: 0.75em;
+      }
+    }
+  }
+}

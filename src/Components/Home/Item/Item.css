@@ -1,0 +1,112 @@
+@-webkit-keyframes appear_card {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes appear_card {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+.Item {
+  width: 294px;
+  height: 392px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+}
+
+.Item:hover .item_content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.Item .item_content {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: appear_card 2s ease;
+          animation: appear_card 2s ease;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.Item .item_content .image_side {
+  border-radius: 0.5em;
+  overflow: hidden;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.Item .item_content .image_side img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Item .item_content .text_side {
+  overflow: scroll;
+  -webkit-transform: rotateY(180deg) translateZ(50px) translate(50%, -50%);
+          transform: rotateY(180deg) translateZ(50px) translate(50%, -50%);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5em 0;
+  color: white;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+}
+
+.Item .item_content .text_side::-webkit-scrollbar {
+  display: none;
+}
+
+.Item .item_content .text_side .drink_name {
+  font-size: 1.5rem;
+}
+
+.Item .item_content .text_side h1 {
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
+}
+
+.Item .item_content .text_side p,
+.Item .item_content .text_side span {
+  margin-bottom: 0.75em;
+}
+/*# sourceMappingURL=Item.css.map */
